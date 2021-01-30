@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args) {
         int command = 0;
         Library library = new Library();
-        while (command !=5){
+        while (command != 5){
             System.out.print("\nГлавное меню программы.\n" +
                     "1. Рамдомное заполнение.\n" +
                     "2. Ручное заполнение.\n" +
@@ -172,7 +172,9 @@ public class Main {
                         }
                     }
                 }
-            } else { // вывод сообщения, если пользователь ввел не верную комманду в меню
+            } else if (command == 5) { // выход из цикла/программы
+                break;
+            } else { // вывод сообщения, если пользователь ввел не верную команду в меню
                 System.out.print("Введите корректный номер меню.");
             }
         }
